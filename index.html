@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
+
 <head>
-  <script src="color-modes.js"></script>
+  <script src="assets/js/color-modes.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
@@ -10,7 +11,7 @@
   <title>Project´s Portfolio Jose</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-bottom/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     .bd-placeholder-img {
@@ -20,11 +21,13 @@
       -moz-user-select: none;
       user-select: none;
     }
+
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
       }
     }
+
     .b-example-divider {
       width: 100%;
       height: 3rem;
@@ -33,21 +36,25 @@
       border-width: 1px 0;
       box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
     }
+
     .b-example-vr {
       flex-shrink: 0;
       width: 1.5rem;
       height: 100vh;
     }
+
     .bi {
       vertical-align: -.125em;
       fill: currentColor;
     }
+
     .nav-scroller {
       position: relative;
       z-index: 2;
       height: 2.75rem;
       overflow-y: hidden;
     }
+
     .nav-scroller .nav {
       display: flex;
       flex-wrap: nowrap;
@@ -58,6 +65,7 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
+
     .btn-bd-primary {
       --bd-violet-bg: #712cf9;
       --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
@@ -74,14 +82,17 @@
       --bs-btn-active-bg: #5a23c8;
       --bs-btn-active-border-color: #5a23c8;
     }
+
     .bd-mode-toggle {
       z-index: 1500;
     }
+
     .bd-mode-toggle .dropdown-menu .active .bi {
       display: block !important;
     }
   </style>
 </head>
+
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="check2" viewBox="0 0 16 16">
@@ -182,137 +193,352 @@
     <h4 id="scrollspyHeading1"></h4><br><br><br>
     <section>
       <div class="container">
-        <h1 class="text-center">Project´s</h1>
+        <h1 class="text-center">Project´s</h1><br>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col">
             <div class="card border border-primary">
-              <img src="yosoy.png" class="card-img-top rounded-bottom " alt="...">
+              <img src="assets/imgWebp/yoSoyLand.webp" class="card-img-top rounded-bottom " alt="...">
               <div class="card-body">
-                <h5 class="card-title text-center">Landing Page Yo-soy(Developing)</h5>
-                <p class="card-text">information site for redirection</p>
-                  <h6 class="card-title text-center">technologies</h6>
-                  <p>HTML, CSS, JAVASCRIPT, BOOTSTRAPWATCH, JQUERY</p>
-                  <div class="container d-flex justify-content-center">
-                    <a href="https://github.com/Jose-Bohorquez/landing-Page-YoSoy" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
-                      See in <i class="fab fa-github"></i>
-                      GitHub
-                    </a>
-                    <a href="https://yo-soy.co/" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
-                      See in <i class="fas fa-globe"></i>
-                      WEB
-                    </a>
+                <h5 class="text-center">Landing Page Yo-soy</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#yoSoyInfo" aria-expanded="false" aria-controls="yoSoyInfo">
+                        Info
+                      </button>
+                    </h2>
+                    <div id="yoSoyInfo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="card-text">information site for redirection</p>                        
+                      </div>
+                    </div>
                   </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border border-primary">
-              <img src="authenticApp.png" class="card-img-top rounded-bottom " alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">AuthenticApp(Developing)</h5>
-                <p class="card-text">This site is focused on registering people so that they can later create their work profile, 
-                  apply for active offers and follow up on their applications.</p>
-                  <h6 class="card-title text-center">technologies</h6>
-                  <p>HTML, CSS, JAVASCRIPT, PHP, LARAVEL, MYSQL, DOCKER, SWEETALERT2, DUMPDF, BOOTSTRAPWATCH, JQUERY</p>
-                  <a href="https://github.com/Jose-Bohorquez/kit-dev" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
+                </div><br>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#yoSoyTec" aria-expanded="false" aria-controls="yoSoyTec">
+                        technologies
+                      </button>
+                    </h2>
+                    <div id="yoSoyTec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>HTML, CSS, JAVASCRIPT, BOOTSTRAPWATCH, JQUERY</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="container d-flex justify-content-center">
+                  <a href="https://github.com/Jose-Bohorquez/landing-Page-YoSoy"
+                    class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
                     See in <i class="fab fa-github"></i>
                     GitHub
                   </a>
-                  <a href="https://app.authenticfarma.com/login" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
-                    See in <i class="fas fa-globe"></i>
-                    WEB
-                  </a><br>
-                  <p>Access credentials: <br>
-                    email: tojecab972@mfunza.com <br>
-                    pwd: abcd1234
-                  </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border border-primary">
-              <img src="authenticAdmin.png" class="card-img-top rounded-bottom " alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">AuthenticAdmin(Developing)</h5>
-                <p class="card-text">This site is focused on managing offers, candidates and subsequent hiring of candidates who apply or register.</p>
-                  <h6 class="card-title text-center">technologies</h6>
-                  <p>HTML, CSS, JAVASCRIPT, PHP, LARAVEL, MYSQL, DOCKER, SWEETALERT2, DUMPDF, BOOTSTRAPWATCH, JQUERY</p>
-                  <a href="https://github.com/Jose-Bohorquez/kit-dev" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
-                    See in <i class="fab fa-github"></i>
-                    GitHub
-                  </a>
-                  <a href="https://github.com/Jose-Bohorquez/kit-dev" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
+                  <a href="https://yo-soy.co/" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank"
+                    title="GitHub">
                     See in <i class="fas fa-globe"></i>
                     WEB
                   </a>
-                  <p>Access credentials: (request by email)
-                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col">
+            <div class="card border border-primary">
+              <img src="assets/imgWebp/appAuth.webp" class="card-img-top rounded-bottom " alt="...">
+              <div class="card-body">
+                <h5 class="text-center">AuthenticApp</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#appAuthInfo" aria-expanded="false" aria-controls="appAuthInfo">
+                        Info
+                      </button>
+                    </h2>
+                    <div id="appAuthInfo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="card-text">This site is focused on registering people so that they can later create their 
+                          work profile, apply for active offers and follow up on their applications.
+                        </p>                        
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#appAuthTec" aria-expanded="false" aria-controls="appAuthTec">
+                        technologies
+                      </button>
+                    </h2>
+                    <div id="appAuthTec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>HTML, CSS, JAVASCRIPT, PHP, LARAVEL, MYSQL, DOCKER, SWEETALERT2, DUMPDF, BOOTSTRAPWATCH, JQUERY</p>
+                        <p><strong>Access credentials: </strong><br>
+                          email: tojecab972@mfunza.com <br>
+                          pwd: abcd1234
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="container d-flex justify-content-center">
+                  <a href="https://github.com/Jose-Bohorquez/kit-dev" class="btn btn-sm btn-light btn-icon-text m-1"
+                  target="_blank" title="GitHub">
+                  See in <i class="fab fa-github"></i>
+                  GitHub
+                </a>
+                <a href="https://app.authenticfarma.com/login" class="btn btn-sm btn-light btn-icon-text m-1"
+                  target="_blank" title="GitHub">
+                  See in <i class="fas fa-globe"></i>
+                  WEB
+                </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border border-primary">
-              <img src="kit-dev.png" class="card-img-top rounded-bottom " alt="...">
+              <img src="assets/imgWebp/authAdm.webp" class="card-img-top rounded-bottom " alt="...">
               <div class="card-body">
-                <h5 class="card-title text-center">Kit Dev(Developing)</h5>
-                <p class="card-text">blog-type landing page to share content and study material</p>
-                  <h6 class="card-title text-center">technologies</h6>
-                  <p>HTML, CSS, JAVASCRIPT, PHP, BOOTSTRAPWATCH, JQUERY</p>
-                  <a href="https://github.com/Jose-Bohorquez/kit-dev" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
+                <h5 class="text-center">AuthenticAdmin</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#admAuthInfo" aria-expanded="false" aria-controls="admAuthInfo">
+                        Info
+                      </button>
+                    </h2>
+                    <div id="admAuthInfo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="card-text">
+                          This site is focused on managing offers, candidates and subsequent hiring of
+                          candidates who apply or register
+                        </p>                        
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#admAuthTec" aria-expanded="false" aria-controls="admAuthTec">
+                        technologies
+                      </button>
+                    </h2>
+                    <div id="admAuthTec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>HTML, CSS, JAVASCRIPT, PHP, LARAVEL, MYSQL, DOCKER, SWEETALERT2, DUMPDF, BOOTSTRAPWATCH, JQUERY</p>
+                        <p>Access credentials: (request by email)
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="container d-flex justify-content-center">
+                  <a href="https://github.com/Jose-Bohorquez/kit-dev" class="btn btn-sm btn-light btn-icon-text m-1"
+                    target="_blank" title="GitHub">
                     See in <i class="fab fa-github"></i>
                     GitHub
                   </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border border-primary">
-              <img src="campeche.png" class="card-img-top rounded-bottom " alt="...">
+              <img src="assets/imgWebp/kit-dev.webp" class="card-img-top rounded-bottom " alt="...">
               <div class="card-body">
-                <h5 class="card-title text-center">Campéche(Developing)</h5>
-                <p class="card-text">project oriented to the countryside and the reception of technology in rural areas</p>
-                <h6 class="card-title"> text-centertechnologies</h6>
-                <p>HTML, CSS, JAVASCRIPT, BOOTSTRAP, MYSQL, SWEETALERT2, DATATABLES, JQUERY</p>
-                <a href="https://github.com/Jose-Bohorquez/Campeche" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
-                  See in <i class="fab fa-github"></i>
-                  GitHub
-                </a>
+                <h5 class="text-center">Kit-Dev</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#kitDevInfo" aria-expanded="false" aria-controls="kitDevInfo">
+                        Info
+                      </button>
+                    </h2>
+                    <div id="kitDevInfo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="card-text">blog-type landing page to share content and study material
+                        </p>                        
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#kitDevTec" aria-expanded="false" aria-controls="kitDevTec">
+                        technologies
+                      </button>
+                    </h2>
+                    <div id="kitDevTec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>HTML, CSS, JAVASCRIPT, PHP, BOOTSTRAPWATCH, JQUERY</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="container d-flex justify-content-center">
+                  <a href="https://github.com/Jose-Bohorquez/kit-dev" class="btn btn-sm btn-light btn-icon-text m-1"
+                    target="_blank" title="GitHub">
+                    See in <i class="fab fa-github"></i>
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border border-primary">
-              <img src="servitech.png" class="card-img-top rounded-bottom " alt="...">
+              <img src="assets/imgWebp/campeche.webp" class="card-img-top rounded-bottom " alt="...">
               <div class="card-body">
-                <h5 class="card-title text-center">Servitech(Developing)</h5>
-                <p class="card-text">website dedicated to computer maintenance, sale of spare parts and accessories</p>
-                  <h6 class="card-title text-center">technologies</h6>
-                <p>HTML, CSS, JAVASCRIPT, PHP, CODEIGHNITER4, BOOTSTRAP, MYSQL, SWEETALERT2, DATATABLES</p>
-                <a href="https://github.com/Jose-Bohorquez/Servitech" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
-                  See in <i class="fab fa-github"></i>
-                  GitHub
-                </a>
+                <h5 class="text-center">Campéche(Developing)</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#campeInfo" aria-expanded="false" aria-controls="campeInfo">
+                        Info
+                      </button>
+                    </h2>
+                    <div id="campeInfo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="card-text">project oriented to the countryside and the reception of technology in rural areas
+                        </p>                        
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#campeTec" aria-expanded="false" aria-controls="campeTec">
+                        technologies
+                      </button>
+                    </h2>
+                    <div id="campeTec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>HTML, CSS, JAVASCRIPT, BOOTSTRAP, MYSQL, SWEETALERT2, DATATABLES, JQUERY</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="container d-flex justify-content-center">
+                  <a href="https://github.com/Jose-Bohorquez/Campeche" class="btn btn-sm btn-light btn-icon-text m-1"
+                    target="_blank" title="GitHub">
+                    See in <i class="fab fa-github"></i>
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border border-primary">
-              <img src="porta.png" class="card-img-top rounded-bottom " alt="...">
+              <img src="assets/imgWebp/servitech.webp" class="card-img-top rounded-bottom " alt="...">
               <div class="card-body">
-                <h5 class="card-title text-center">PortFolio</h5>
-                <p class="card-text">project portfolio to show my professional</p>
-                  <h6 class="card-title text-center">technologies</h6>
-                <p>HTML, CSS, JAVASCRIPT, BOOTSTRAP</p>
-                <a href="https://github.com/Jose-Bohorquez/Jose-Bohorquez.github.io" class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
-                  See in <i class="fab fa-github"></i>
-                  GitHub
-                </a>
+                <h5 class="text-center">Servitech(Developing)</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#serviInfo" aria-expanded="false" aria-controls="serviInfo">
+                        Info
+                      </button>
+                    </h2>
+                    <div id="serviInfo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="card-text">website dedicated to computer maintenance, sale of spare parts and accessories
+                        </p>                        
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#serviTec" aria-expanded="false" aria-controls="serviTec">
+                        technologies
+                      </button>
+                    </h2>
+                    <div id="serviTec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>HTML, CSS, JAVASCRIPT, PHP, CODEIGHNITER4, BOOTSTRAP, MYSQL, SWEETALERT2, DATATABLES</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="container d-flex justify-content-center">
+                  <a href="https://github.com/Jose-Bohorquez/Servitech" class="btn btn-sm btn-light btn-icon-text m-1"
+                    target="_blank" title="GitHub">
+                    See in <i class="fab fa-github"></i>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border border-primary">
+              <img src="assets/imgWebp/porta.webp" class="card-img-top rounded-bottom " alt="...">
+              <div class="card-body">
+                <h5 class="text-center">PortFolio</h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#portInfo" aria-expanded="false" aria-controls="portInfo">
+                        Info
+                      </button>
+                    </h2>
+                    <div id="portInfo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p class="card-text">project portfolio to show my professional
+                        </p>                        
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#portTec" aria-expanded="false" aria-controls="portTec">
+                        technologies
+                      </button>
+                    </h2>
+                    <div id="portTec" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <p>HTML, CSS, JAVASCRIPT, BOOTSTRAP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><br>
+                <div class="container d-flex justify-content-center">
+                  <a href="https://github.com/Jose-Bohorquez/Jose-Bohorquez.github.io"
+                    class="btn btn-sm btn-light btn-icon-text m-1" target="_blank" title="GitHub">
+                    See in <i class="fab fa-github"></i>
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <br><br>
     <h4 id="scrollspyHeading2"></h4><br><br><br>
     <h1 class="text-center">About Me</h1>
     <section>
@@ -346,12 +572,14 @@
                     </p>
                     <div class="row">
                       <div class="col">
-                        <div class="container text-center"><!-- 
+                        <div class="container text-center">
+                          <!-- 
                           <a href="perfilActualizado.pdf" class="btn btn-primary btn-icon-text" target="_blank" title="Descargar CV en Word">
                             <i class="fas fa-file-word"></i>
                             Descargar CV (Word)
                           </a>-->
-                          <a href="perfilActualizado.pdf" class="btn btn-danger btn-icon-text" target="_blank" title="Descargar CV en PDF">
+                          <a href="assets/arch/perfilActualizado.pdf" class="btn btn-danger btn-icon-text" target="_blank"
+                            title="Descargar CV en PDF">
                             <i class="fas fa-file-pdf"></i>
                             Download CV (PDF)
                           </a>
@@ -361,7 +589,7 @@
                   </div>
                 </div>
                 <div class="col-sm-12 col-md-2 d-flex justify-content-center">
-                  <img src="perfil.jpg" class="img-fluid rounded-5 rounded-md-5" alt="foto_jose">
+                  <img src="assets/fotoWebp/perfil.webp" class="img-fluid rounded-5 rounded-md-5" alt="foto_jose">
                 </div>
               </div>
             </div>
@@ -369,6 +597,7 @@
         </div>
       </div>
     </section>
+    <br><br>
     <section>
       <h4 id="scrollspyHeading3"></h4><br><br><br>
       <h1 class="text-center">Contact</h1>
@@ -379,39 +608,44 @@
           <div class="col shadow-lg p-3 mb-5 bg-body-tertiary rounded">
             <div class="row ">
               <div class="col m-1">
-                <a href="mailto:bd567358546@gmail.com" class="btn btn-danger btn-icon-text" target="_blank" title="Gmail">
+                <a href="mailto:bd567358546@gmail.com" class="btn btn-danger btn-icon-text" target="_blank"
+                  title="Gmail">
                   <i class="fab fa-google"></i>
                   Gmail
                 </a>
               </div>
               <div class="col m-1">
-                  <a href="https://www.linkedin.com/in/jose-bohorquez-full-stack-software-developer/" class="btn btn-primary btn-icon-text" target="_blank" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/jose-bohorquez-full-stack-software-developer/"
+                  class="btn btn-primary btn-icon-text" target="_blank" title="LinkedIn">
                   <i class="fab fa-linkedin"></i>
                   LinkedIn
                 </a>
               </div>
               <div class="col m-1">
-                  <a href="https://github.com/Jose-Bohorquez" class="btn btn-sm btn-light btn-icon-text" target="_blank" title="GitHub">
+                <a href="https://github.com/Jose-Bohorquez" class="btn btn-sm btn-light btn-icon-text" target="_blank"
+                  title="GitHub">
                   <i class="fab fa-github"></i>
                   GitHub
                 </a>
               </div>
               <div class="col m-1">
-                <a href="https://wa.link/yd3057" class="btn btn-success btn-icon-text" target="_blank" title="WhatsApp Web">
+                <a href="https://wa.link/yd3057" class="btn btn-success btn-icon-text" target="_blank"
+                  title="WhatsApp Web">
                   <i class="fab fa-whatsapp"></i>
-                  WhatsApp              
+                  WhatsApp
                 </a>
               </div>
               <div class="col m-1">
-                  <a href="" class="btn btn-info btn-icon-text disabled" target="_blank" title="Kit Dev">
+                <a href="" class="btn btn-info btn-icon-text disabled" target="_blank" title="Kit Dev">
                   <i class="fas fa-globe"></i>
                   Kit-Dev
                 </a>
               </div>
               <div class="col m-1">
-                <a href="https://sistema-ayuda-pymes.com/" class="btn btn-warning btn-icon-text disabled" target="_blank" title="Sistema de Ayuda PYMEs">
+                <a href="https://sistema-ayuda-pymes.com/" class="btn btn-warning btn-icon-text disabled"
+                  target="_blank" title="Sistema de Ayuda PYMEs">
                   <i class="fas fa-briefcase"></i>
-                  Code2355              
+                  Code2355
                 </a>
               </div>
             </div>
@@ -439,8 +673,10 @@
       <div class="container">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#scrollspyHeading1" class="nav-link px-2 text-body-secondary">Project's</a></li>
-            <li class="nav-item"><a href="#scrollspyHeading2" class="nav-link px-2 text-body-secondary">About Me</a></li>
+            <li class="nav-item"><a href="#scrollspyHeading1" class="nav-link px-2 text-body-secondary">Project's</a>
+            </li>
+            <li class="nav-item"><a href="#scrollspyHeading2" class="nav-link px-2 text-body-secondary">About Me</a>
+            </li>
             <li class="nav-item"><a href="#scrollspyHeading3" class="nav-link px-2 text-body-secondary">Contact</a></li>
           </ul>
           <p class="text-center text-body-secondary">&copy; 2024 Code2355 | made with love by José Bohórquez</p>
@@ -452,7 +688,7 @@
   <p>...</p> 
 -->
   </div> <!-- fin scroollspy -->
-  <script src="bootstrap.bundle.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -471,4 +707,5 @@
     });
   </script>
 </body>
+
 </html>
