@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -694,17 +695,32 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- JavaScript para copiar al portapapeles -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   <script>
-    document.getElementById('copyButton').addEventListener('click', function () {
-      // Obtener el elemento de entrada
-      var emailInput = document.getElementById('emailInput');
-      // Seleccionar el texto del campo de entrada
-      emailInput.select();
-      // Copiar el texto al portapapeles
-      document.execCommand('copy');
-      // Alertar al usuario (opcional)
-      alert('Correo electrónico copiado al portapapeles');
-    });
+      document.getElementById('copyButton').addEventListener('click', function() {
+          const email = 'bd567358546@gmail.com';
+          
+          // Copiar al portapapeles
+          navigator.clipboard.writeText(email).then(function() {
+              // Mostrar SweetAlert2 cuando la copia sea exitosa
+              Swal.fire({
+                  icon: 'success',
+                  title: '¡Copied !',
+                  text: 'The email has been copied to the clipboard.',
+                  timer: 2000,
+                  showConfirmButton: false
+              });
+          }).catch(function(err) {
+              // Mostrar SweetAlert2 en caso de error
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Error',
+                  text: 'Could not copy email.',
+                  timer: 2000,
+                  showConfirmButton: false
+              });
+          });
+      });
   </script>
 </body>
 
