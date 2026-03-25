@@ -1,5 +1,8 @@
 const CONTACT = {
   email: "josejbohorquezd@gmail.com",
+  phone: "+57 3178773186",
+  address: "Calle 5A #71D-25 Techo, Bogota, Colombia",
+  cv: "https://dev-and-test.space/mas/cv/cv_bd_06_full.html",
   github: "https://github.com/Jose-Bohorquez",
   linkedin: "https://www.linkedin.com/in/jose-bohorquez-full-stack-software-developer/",
   whatsapp: "https://wa.link/yd3057",
@@ -37,7 +40,7 @@ function renderHeader(active) {
   host.innerHTML = `
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="/">Jose Bohorquez | Portfolio</a>
+        <a class="brand" href="/">Jose Bohorquez | Full Stack Senior</a>
         <nav class="nav-links" aria-label="Navegacion principal">
           <a class="nav-link ${active === "home" ? "active" : ""}" href="/">Inicio</a>
           <a class="nav-link ${active === "projects" ? "active" : ""}" href="/pages/projects.html">Proyectos</a>
@@ -59,9 +62,10 @@ function renderFooter() {
     <footer class="site-footer">
       <div class="container footer-wrap">
         <div>
-          <a class="nav-link" href="/pages/projects.html">Ver todos los proyectos</a>
+          <a class="nav-link" href="/pages/projects.html">Ver casos y proyectos</a>
+          <a class="nav-link" href="${CONTACT.cv}" target="_blank" rel="noopener">Ver CV online</a>
         </div>
-        <div>© ${year} Code2355 | Jose Bohorquez</div>
+        <div>© ${year} Code2355 | Jose Bohorquez Delgado</div>
       </div>
     </footer>
   `;
@@ -98,6 +102,12 @@ function initContactBindings() {
   const emailInput = document.querySelector("[data-email-input]");
   if (emailInput) emailInput.value = CONTACT.email;
 
+  const phone = document.querySelector("[data-contact-phone]");
+  if (phone) phone.textContent = CONTACT.phone;
+
+  const address = document.querySelector("[data-contact-address]");
+  if (address) address.textContent = CONTACT.address;
+
   const github = document.querySelector("[data-contact-github]");
   if (github) github.href = CONTACT.github;
 
@@ -109,6 +119,11 @@ function initContactBindings() {
 
   const business = document.querySelector("[data-contact-business]");
   if (business) business.href = CONTACT.business;
+
+  const cvLinks = document.querySelectorAll("[data-cv-link]");
+  cvLinks.forEach((link) => {
+    link.href = CONTACT.cv;
+  });
 }
 
 function initCountdown() {
