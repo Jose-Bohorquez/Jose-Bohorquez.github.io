@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Jose Bohorquez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <div data-site-header></div>
+
+  <main class="section">
+    <div class="container">
+      <h1>Contacto</h1>
+      <p class="section-intro">Canales directos para conversar sobre colaboraciones, vacantes y proyectos.</p>
+
+      <div class="contact-grid">
+        <a class="contact-link" data-contact-email href="#">Correo</a>
+        <a class="contact-link" data-contact-linkedin href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="contact-link" data-contact-github href="#" target="_blank" rel="noopener">GitHub</a>
+        <a class="contact-link" data-contact-whatsapp href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="contact-link" data-contact-business href="#" target="_blank" rel="noopener">Code2355</a>
+      </div>
+
+      <div class="panel" style="padding: 1rem; margin-top: 1rem;">
+        <h3>Copiar correo</h3>
+        <div class="copy-box">
+          <input type="text" data-email-input readonly>
+          <button class="btn btn-primary" data-copy-email>Copiar</button>
+        </div>
+      </div>
+
+      <div class="panel" style="padding: 1rem; margin-top: 1rem;">
+        <h3>CV y perfil</h3>
+        <p class="section-intro">Aqui puedes mantener la version actual de tu hoja de vida sin tocar otras paginas.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/assets/arch/perfil202506.pdf" download>Descargar CV actual</a>
+          <a class="btn" href="/pages/about.html">Ver perfil profesional</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+
+  <script src="/assets/js/site.js"></script>
+  <script>
+    window.Site.bootstrapPage("contact");
+  </script>
+</body>
+</html>
