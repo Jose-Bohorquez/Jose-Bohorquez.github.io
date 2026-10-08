@@ -2,7 +2,7 @@ const CONTACT = {
   email: "josejbohorquezd@gmail.com",
   phone: "+57 317 877 3186",
   location: "Bogotá, Colombia",
-  cv: "https://dev-and-test.space/mas/cv/cv_bd_06_full.html",
+  cv: "https://jose-bohorquez.online/",
   github: "https://github.com/Jose-Bohorquez",
   linkedin: "https://www.linkedin.com/in/jose-bohorquez-full-stack-software-developer/",
   whatsapp: "https://wa.link/yd3057"
