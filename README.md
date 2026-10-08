@@ -26,6 +26,14 @@ Sitio estático: HTML, CSS y JavaScript sin frameworks ni proceso de compilació
 4. `featured: true` lo muestra en el inicio (máximo 5, en el orden de la lista; el primero sale en grande).
 5. Una `category` nueva crea su propio botón de filtro.
 
+## Animaciones e interacción
+
+- `data-enter` (con `style="--i:N"` para el orden) anima un elemento al cargar la página; `data-split` hace subir un titular palabra por palabra.
+- `data-reveal` revela un elemento al hacer scroll; `data-reveal-group` lo aplica, escalonado, a todos los hijos directos.
+- Todo se desactiva si el sistema tiene activado "reducir movimiento", y el contenido vuelve a ser visible si el JS no llega a cargar.
+- En Proyectos, el filtro y la búsqueda quedan en la URL (`?tipo=Sitio%20web&q=php`), así que se pueden compartir.
+- El formulario de Contacto no usa servidor: arma el mensaje y lo abre en el correo o en WhatsApp.
+
 ## Datos de contacto y CV
 
 Se editan en un solo lugar: `CONTACT` al inicio de `/assets/js/site.js`.

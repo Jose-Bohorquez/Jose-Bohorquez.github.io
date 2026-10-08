@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#2747b0">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <script>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
+  <script>(function(d){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))d.classList.add("dark")}catch(e){}if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window){d.classList.add("motion");setTimeout(function(){if(!window.Site)d.classList.remove("motion")},2500)}})(document.documentElement)</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
   <div data-site-header></div>
 
-  <main id="contenido">
+  <main id="contenido" tabindex="-1">
     <section class="container page-head not-found">
       <h1>Esta página no existe</h1>
       <p class="lead">Puede que el enlace sea de una versión anterior del portafolio. Los proyectos y el contacto siguen aquí.</p>

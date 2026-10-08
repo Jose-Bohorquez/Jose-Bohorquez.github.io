@@ -16,7 +16,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#2747b0">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <script>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
+  <script>(function(d){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))d.classList.add("dark")}catch(e){}if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&"IntersectionObserver"in window){d.classList.add("motion");setTimeout(function(){if(!window.Site)d.classList.remove("motion")},2500)}})(document.documentElement)</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
@@ -25,57 +25,100 @@
 <body>
   <div data-site-header></div>
 
-  <main id="contenido">
+  <main id="contenido" tabindex="-1">
     <header class="container page-head">
-      <h1>Hablemos</h1>
-      <p class="lead">
+      <h1 data-split>Hablemos</h1>
+      <p class="lead" data-enter style="--i:2">
         Disponible para roles senior, liderazgo técnico y proyectos de automatización,
         desarrollo full stack e integración de plataformas empresariales.
       </p>
     </header>
 
     <div class="container contact-grid">
-      <section class="panel" aria-labelledby="datos">
-        <h2 id="datos">Datos directos</h2>
-        <dl class="contact-data">
-          <div>
-            <dt>Correo</dt>
-            <dd>
-              <div class="copy-row">
-                <a data-contact-email href="#">josejbohorquezd@gmail.com</a>
-                <button class="btn btn-sm" type="button" data-copy-email>Copiar correo</button>
-              </div>
-              <span class="copy-status" data-copy-status role="status"></span>
-            </dd>
+      <section class="panel composer" aria-labelledby="escribir" data-enter style="--i:3">
+        <h2 id="escribir">Escríbeme</h2>
+        <p class="muted composer-intro">Completa el mensaje y elige por dónde enviarlo: se abre tu correo o WhatsApp con el texto listo.</p>
+        <form data-composer novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-nombre">Nombre</label>
+              <input id="f-nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="e-nombre">
+              <span class="field-error" id="e-nombre" data-error-for="nombre"></span>
+            </div>
+            <div class="field">
+              <label for="f-empresa">Empresa <span class="optional">(opcional)</span></label>
+              <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+            </div>
           </div>
-          <div>
-            <dt>Teléfono</dt>
-            <dd><a data-contact-phone href="#"></a></dd>
+          <div class="field">
+            <label for="f-motivo">Motivo</label>
+            <select id="f-motivo" name="motivo">
+              <option>Oferta laboral</option>
+              <option>Proyecto de automatización</option>
+              <option>Desarrollo de software a la medida</option>
+              <option>Consultoría o soporte</option>
+              <option>Otro</option>
+            </select>
           </div>
-          <div>
-            <dt>Ubicación</dt>
-            <dd data-contact-location></dd>
+          <div class="field">
+            <div class="field-label-row">
+              <label for="f-mensaje">Mensaje</label>
+              <span class="field-counter" data-counter aria-hidden="true"></span>
+            </div>
+            <textarea id="f-mensaje" name="mensaje" rows="5" maxlength="1000" required aria-describedby="e-mensaje" placeholder="Por ejemplo: buscamos automatizar el restablecimiento de contraseñas desde WhatsApp."></textarea>
+            <span class="field-error" id="e-mensaje" data-error-for="mensaje"></span>
           </div>
-        </dl>
+          <div class="actions">
+            <button class="btn btn-primary" type="submit" value="email">Enviar por correo</button>
+            <button class="btn" type="submit" value="whatsapp">Enviar por WhatsApp</button>
+          </div>
+        </form>
       </section>
 
-      <section class="panel" aria-labelledby="canales">
-        <h2 id="canales">Otros canales</h2>
-        <ul class="channel-list">
-          <li><a class="channel" data-contact-linkedin href="#" target="_blank" rel="noopener"><div><strong>LinkedIn</strong><span>Experiencia y recomendaciones</span></div><span data-icon-external></span></a></li>
-          <li><a class="channel" data-contact-whatsapp href="#" target="_blank" rel="noopener"><div><strong>WhatsApp</strong><span>Respuesta más rápida</span></div><span data-icon-external></span></a></li>
-          <li><a class="channel" data-contact-github href="#" target="_blank" rel="noopener"><div><strong>GitHub</strong><span>Código y repositorios públicos</span></div><span data-icon-external></span></a></li>
-          <li><a class="channel" data-cv-link href="#" target="_blank" rel="noopener"><div><strong>CV online</strong><span>Trayectoria completa</span></div><span data-icon-external></span></a></li>
-        </ul>
-      </section>
+      <div class="contact-side" data-reveal-group>
+        <section class="panel" aria-labelledby="datos">
+          <h2 id="datos">Datos directos</h2>
+          <dl class="contact-data">
+            <div>
+              <dt>Correo</dt>
+              <dd>
+                <div class="copy-row">
+                  <a data-contact-email href="#">josejbohorquezd@gmail.com</a>
+                  <button class="btn btn-sm copy-btn" type="button" data-copy-email>
+                    <span class="copy-label">Copiar</span><span class="copy-done" aria-hidden="true">Copiado</span>
+                  </button>
+                </div>
+              </dd>
+            </div>
+            <div>
+              <dt>Teléfono</dt>
+              <dd><a data-contact-phone href="#"></a></dd>
+            </div>
+            <div>
+              <dt>Ubicación</dt>
+              <dd data-contact-location></dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="panel" aria-labelledby="canales">
+          <h2 id="canales">Otros canales</h2>
+          <ul class="channel-list">
+            <li><a class="channel" data-contact-linkedin href="#" target="_blank" rel="noopener"><div><strong>LinkedIn</strong><span>Experiencia y recomendaciones</span></div><span data-icon-external></span></a></li>
+            <li><a class="channel" data-contact-whatsapp href="#" target="_blank" rel="noopener"><div><strong>WhatsApp</strong><span>Respuesta más rápida</span></div><span data-icon-external></span></a></li>
+            <li><a class="channel" data-contact-github href="#" target="_blank" rel="noopener"><div><strong>GitHub</strong><span>Código y repositorios públicos</span></div><span data-icon-external></span></a></li>
+            <li><a class="channel" data-cv-link href="#" target="_blank" rel="noopener"><div><strong>CV online</strong><span>Trayectoria completa</span></div><span data-icon-external></span></a></li>
+          </ul>
+        </section>
+      </div>
     </div>
 
     <section class="section" aria-labelledby="propuesta">
-      <div class="container">
+      <div class="container" data-reveal>
         <div class="section-head">
           <h2 id="propuesta">Qué puedes esperar</h2>
         </div>
-        <ul class="list" style="max-width: 62ch;">
+        <ul class="list expect-list">
           <li>Soluciones de software robustas y mantenibles.</li>
           <li>Automatización de procesos de soporte y operación para reducir la carga manual.</li>
           <li>Integración de sistemas empresariales para mejorar los tiempos de respuesta.</li>
@@ -89,10 +132,10 @@
 
   <script src="/assets/js/site.js"></script>
   <script>
-    window.Site.bootstrapPage("contact");
     document.querySelectorAll("[data-icon-external]").forEach((node) => {
       node.outerHTML = window.Site.ICONS.external;
     });
+    window.Site.bootstrapPage("contact");
   </script>
 </body>
 </html>
