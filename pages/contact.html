@@ -3,56 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Jose Bohorquez</title>
+  <title>Contacto | José Bohórquez</title>
+  <meta name="description" content="Contacta a José Bohórquez para roles senior, liderazgo técnico o proyectos de automatización e integración de plataformas.">
+  <link rel="canonical" href="https://jose-bohorquez.github.io/pages/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="José Bohórquez">
+  <meta property="og:title" content="Contacto | José Bohórquez">
+  <meta property="og:description" content="Correo, LinkedIn, WhatsApp y CV online.">
+  <meta property="og:url" content="https://jose-bohorquez.github.io/pages/contact.html">
+  <meta property="og:image" content="https://jose-bohorquez.github.io/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2747b0">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
   <div data-site-header></div>
 
-  <main class="section">
-    <div class="container">
-      <h1>Contacto profesional</h1>
-      <p class="section-intro">
-        Estoy disponible para roles senior, liderazgos tecnicos y proyectos de automatizacion,
-        desarrollo full stack e integracion de plataformas empresariales.
+  <main id="contenido">
+    <header class="container page-head">
+      <h1>Hablemos</h1>
+      <p class="lead">
+        Disponible para roles senior, liderazgo técnico y proyectos de automatización,
+        desarrollo full stack e integración de plataformas empresariales.
       </p>
+    </header>
 
-      <div class="panel" style="padding: 1rem; margin-bottom: 1rem;">
-        <h3>Datos directos</h3>
-        <p class="section-intro" style="margin-bottom:0.4rem;"><strong>Email:</strong> <a data-contact-email href="#"></a></p>
-        <p class="section-intro" style="margin:0.4rem 0;"><strong>Telefono:</strong> <span data-contact-phone></span></p>
-        <p class="section-intro" style="margin:0.4rem 0;"><strong>Ubicacion:</strong> <span data-contact-address></span></p>
-      </div>
+    <div class="container contact-grid">
+      <section class="panel" aria-labelledby="datos">
+        <h2 id="datos">Datos directos</h2>
+        <dl class="contact-data">
+          <div>
+            <dt>Correo</dt>
+            <dd>
+              <div class="copy-row">
+                <a data-contact-email href="#">josejbohorquezd@gmail.com</a>
+                <button class="btn btn-sm" type="button" data-copy-email>Copiar correo</button>
+              </div>
+              <span class="copy-status" data-copy-status role="status"></span>
+            </dd>
+          </div>
+          <div>
+            <dt>Teléfono</dt>
+            <dd><a data-contact-phone href="#"></a></dd>
+          </div>
+          <div>
+            <dt>Ubicación</dt>
+            <dd data-contact-location></dd>
+          </div>
+        </dl>
+      </section>
 
-      <div class="contact-grid">
-        <a class="contact-link" data-contact-linkedin href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="contact-link" data-contact-github href="#" target="_blank" rel="noopener">GitHub</a>
-        <a class="contact-link" data-contact-whatsapp href="#" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="contact-link" data-contact-business href="#" target="_blank" rel="noopener">Code2355</a>
-        <a class="contact-link" data-cv-link href="#" target="_blank" rel="noopener">CV Online</a>
-      </div>
+      <section class="panel" aria-labelledby="canales">
+        <h2 id="canales">Otros canales</h2>
+        <ul class="channel-list">
+          <li><a class="channel" data-contact-linkedin href="#" target="_blank" rel="noopener"><div><strong>LinkedIn</strong><span>Experiencia y recomendaciones</span></div><span data-icon-external></span></a></li>
+          <li><a class="channel" data-contact-whatsapp href="#" target="_blank" rel="noopener"><div><strong>WhatsApp</strong><span>Respuesta más rápida</span></div><span data-icon-external></span></a></li>
+          <li><a class="channel" data-contact-github href="#" target="_blank" rel="noopener"><div><strong>GitHub</strong><span>Código y repositorios públicos</span></div><span data-icon-external></span></a></li>
+          <li><a class="channel" data-cv-link href="#" target="_blank" rel="noopener"><div><strong>CV online</strong><span>Trayectoria completa</span></div><span data-icon-external></span></a></li>
+        </ul>
+      </section>
+    </div>
 
-      <div class="panel" style="padding: 1rem; margin-top: 1rem;">
-        <h3>Copiar correo</h3>
-        <div class="copy-box">
-          <input type="text" data-email-input readonly>
-          <button class="btn btn-primary" data-copy-email>Copiar</button>
+    <section class="section" aria-labelledby="propuesta">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="propuesta">Qué puedes esperar</h2>
         </div>
-      </div>
-
-      <div class="panel" style="padding: 1rem; margin-top: 1rem;">
-        <h3>Propuesta de valor</h3>
-        <ul class="list">
-          <li>Diseno e implemento soluciones de software robustas y mantenibles.</li>
-          <li>Automatizo procesos de soporte y operacion para reducir carga manual.</li>
-          <li>Integro sistemas empresariales para mejorar tiempos de respuesta.</li>
-          <li>Trabajo con enfoque de negocio, calidad tecnica y entregas medibles.</li>
+        <ul class="list" style="max-width: 62ch;">
+          <li>Soluciones de software robustas y mantenibles.</li>
+          <li>Automatización de procesos de soporte y operación para reducir la carga manual.</li>
+          <li>Integración de sistemas empresariales para mejorar los tiempos de respuesta.</li>
+          <li>Enfoque de negocio, calidad técnica y entregas medibles.</li>
         </ul>
       </div>
-    </div>
+    </section>
   </main>
 
   <div data-site-footer></div>
@@ -60,6 +90,9 @@
   <script src="/assets/js/site.js"></script>
   <script>
     window.Site.bootstrapPage("contact");
+    document.querySelectorAll("[data-icon-external]").forEach((node) => {
+      node.outerHTML = window.Site.ICONS.external;
+    });
   </script>
 </body>
 </html>

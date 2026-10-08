@@ -3,25 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos | Jose Bohorquez</title>
+  <title>Proyectos | José Bohórquez</title>
+  <meta name="description" content="Sitios web, aplicaciones y herramientas desarrolladas por José Bohórquez: PHP, JavaScript, Tailwind, WordPress y más.">
+  <link rel="canonical" href="https://jose-bohorquez.github.io/pages/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="José Bohórquez">
+  <meta property="og:title" content="Proyectos | José Bohórquez">
+  <meta property="og:description" content="Sitios web, aplicaciones y herramientas con código o demo públicos.">
+  <meta property="og:url" content="https://jose-bohorquez.github.io/pages/projects.html">
+  <meta property="og:image" content="https://jose-bohorquez.github.io/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#2747b0">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script>try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.classList.add("dark")}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
   <div data-site-header></div>
 
-  <main class="section">
-    <div class="container">
-      <h1>Proyectos y casos de implementacion</h1>
-      <p class="section-intro">
-        Este portafolio concentra implementaciones reales en desarrollo web,
-        automatizacion de procesos, integraciones empresariales y despliegues cloud.
-        Cada proyecto demuestra capacidad tecnica y orientacion a resultados.
+  <main id="contenido">
+    <header class="container page-head">
+      <h1>Proyectos y casos de implementación</h1>
+      <p class="lead">
+        Desarrollo web, automatización de procesos e integraciones. Los proyectos con código
+        privado aparecen sin enlaces.
       </p>
-      <div id="projects-list" class="grid projects"></div>
-    </div>
+    </header>
+
+    <section class="container" aria-label="Listado de proyectos">
+      <div class="filters" data-filters role="group" aria-label="Filtrar por tipo de proyecto"></div>
+      <div id="projects-list" class="projects-grid"></div>
+    </section>
   </main>
 
   <div data-site-footer></div>
@@ -32,6 +48,7 @@
   <script>
     window.Site.bootstrapPage("projects");
     window.ProjectsUI.renderProjects("#projects-list");
+    window.ProjectsUI.initFilters("[data-filters]", "#projects-list");
   </script>
 </body>
 </html>
